@@ -9,9 +9,13 @@ Essentially what it does is:
  - Use stereographic projection to map it onto unit sphere (the Riemann sphere, which is a compact representation of the complex plane)
  - Convert those coordinates to the complex plane, creating a complex number using the custom ComplexNumber class
  - Apply the desired transformations (I have it set to a square and multiply function but there are other functions I added in the ComplexNumber class that can also be used)
- - Project it back into the XY plane and find which pixels in the original image roughly correlate with that (inverse mapping)
+ - Project it back into the XY plane, modulo, and find which pixels in the original image roughly correlate with that (inverse mapping)
  - Use bilinear interpolation so that pixels with decimal values fit in the image
  - Repeat for every pixel and output
 
 What I learned from making this program was the workflow that shaders and image processors use and more importantly the little bits of math that let a computer make pictures
 which I found really cool. Alongside that, I also learned a lot about complex numbers past the basic introduction I had in school which was really fun as well.
+
+Before showcasing some of the output transformations, here is the original image:
+
+![Original Image](original)
