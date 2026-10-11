@@ -18,4 +18,4 @@ which I found really cool. Alongside that, I also learned a lot about complex nu
 
 Before showcasing some of the output transformations, here is the original image:
 
-![Original Image](./Example Images/original)
+![Original Image](<./Example Images/original.png>)
