@@ -35,7 +35,7 @@ Now onto the transformations themselves!
 
 ![Original Image](<./Example Images/squaredivided.png>)
 
-This transformation here is the image squared and then multiplied by 0.4 (divided by 2.5). Squaring a complex number doubles its angle from the positive real axis essentially rotating it. 
+This transformation above here is the image squared and then multiplied by 0.4 (divided by 2.5). Squaring a complex number doubles its angle from the positive real axis essentially rotating it. 
 Because of this, 2 points can rotate to the same exact point and sample the same color. This duplicates the image around the center. This image is also divided by 2.5, which pushes all the numbers towards 0 (the center on the output image) and makes them loop less because they don't accelerate towards infinity as fast. This makes a kind of zoom in effect for this transformation specifically. Conversely, multiplying it would accelerate it towards infinity which would push everything away from the center and loop aggressively. Less math related but out of all the transformations I've tried out, this is the one I found the most aesthetically pleasing.
 
 
@@ -43,7 +43,7 @@ Because of this, 2 points can rotate to the same exact point and sample the same
 
 ![Original Image](<./Example Images/reciprocal.png>)
 
-This transformation divides 1 by the image. What this means is that as the number gets smaller (towards 0), it starts rapidly accelerating to infinity. On the other hand, the greater the denominator is,
+This transformation above divides 1 by the image. What this means is that as the number gets smaller (towards 0), it starts rapidly accelerating to infinity. On the other hand, the greater the denominator is,
 the closer it approaches 0 on the input which is the center. It's incredible minor but it is important to mention, the very center point is (0,0) which means that when taking the reciprocal the 
 program divides by 0. This returns NaN, which is carried throughout the whole transformation process afterwards. When rounded at the end, NaN becomes 0 which just maps to the corner of the original image. 
 However, because of the bilinear interpolation, the RGB values become 0 because of NaN affecting the weight of the interpolation. This becomes black, meaning that whenever NaN is returned in the program it will always become black if bilinear is turned on. With nearest neighbor, it becomes the color of the very top left pixel (which with this image is black anyways). In this case, only the very center 
@@ -55,7 +55,7 @@ pixel is affected by this which when you zoom in you can see is black.
 
 ![Original Image](<./Example Images/exponent.png>)
 
-This transformation takes e to the power of the image. The left side here has a negative x, and e taken to a negative power increasingly approaches 0. This is why the left side is completely dominated by
+This transformation above takes e to the power of the image. The left side here has a negative x, and e taken to a negative power increasingly approaches 0. This is why the left side is completely dominated by
 black pixels. On the other hand, the right side is positive which when set as the power of e makes it rapidly accelerate towards infinity and thus constantly loop. A big thing to notice here are the weird
 waves happening vertically. This is because the formula for taking e to the power of a complex number involves multiplying with a cosine and sine function which creates the oscillating effect you see.
 
@@ -65,7 +65,7 @@ waves happening vertically. This is because the formula for taking e to the powe
 
 ![Original Image](<./Example Images/cubedivided.png>)
 
-This transformation cubes the image and also divides it (I've only divided it here so that the image is easier to see, the division works the exact same here as it did with the square). Similar to how
+This transformation above cubes the image and also divides it (I've only divided it here so that the image is easier to see, the division works the exact same here as it did with the square). Similar to how
 squaring the image made it duplicate the image across the center, this transformation triples the image across the center. The reason is fairly similar, 3 complex points can rotate to the exact same
 location when cubed. What's cooler in my opinion though is the location of these 3 points. They are all equally spaced from each other around the origin and form an equilateral triangle! As such, you
 can see this triangular shape repeated constantly from the center. If the image was subsequently raised to the 4th power, it would make a square! A 5th power would make it a pentagon, a 6th would make
