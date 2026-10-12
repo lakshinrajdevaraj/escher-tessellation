@@ -56,8 +56,7 @@ pixel is affected by this which when you zoom in you can see is black.
 ![Original Image](<./Example Images/exponent.png>)
 
 This transformation above takes e to the power of the image. The left side here has a negative x, and e taken to a negative power increasingly approaches 0. This is why the left side is completely dominated by
-black pixels. On the other hand, the right side is positive which when set as the power of e makes it rapidly accelerate towards infinity and thus constantly loop. A big thing to notice here are the weird
-waves happening vertically. This is because the formula for taking e to the power of a complex number involves multiplying with a cosine and sine function which creates the oscillating effect you see.
+black pixels as that is what the center of the original image is. On the other hand, the right side is positive which when set as the power of e makes it rapidly accelerate towards infinity and thus constantly loop. A big thing to notice here are the weird waves happening vertically. This is because the formula for taking e to the power of a complex number involves multiplying with a cosine and sine function which creates the oscillating effect you see.
 
 
 
